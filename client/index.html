@@ -1,0 +1,170 @@
+  <body id="page-top">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">findmysocialid.com</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#help">Help</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                     <li>
+                        <!-- <a class="page-scroll" href="#login">Login</a> -->
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header><canvas></canvas>
+
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 class="wow lightSpeedIn">Find Your social id.</h1>
+                <hr>
+                <form class="new-task" autocomplete='off' id='myform'>
+                  {{> typeaheadTemplate}}
+        <br>
+
+  <p>To find your alphanumeric or numeric YouTube, Vine, Instagram, Twitter or Facebook ID for admins, social plugins, and more, enter your <b>personal profile URL</b></p>
+
+{{> ads}}
+        <button class="btn btn-primary btn-xl">Find Alphanumeric ID &rarr;</button>
+
+         {{#each resultModal}}
+        {{> task}}
+         {{/each}}
+      </form>
+            </div>
+        </div>
+
+<!-- <div class="corner-ribbon bottom-right sticky green">Coming Soon! $1 Bulk CSV</div> -->
+
+    </header>
+
+<!-- need to insert a page anchor called #about 'ere -->
+
+    <section id="help" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading2 wow fadeIn">What is my personal profile URL?</h2>
+                    <hr class="light">
+    <p class="examples wow fadeIn">
+        Your profile URL is the the URL you get to when you're landed on your profile page.  It <b>should look</b> something like this:
+    </p>
+
+    <p class="examples good wow fadeIn">
+        <li class="examples wow fadeIn"><code>https://www.facebook.com/johndoe</code></li>
+        <li class="examples wow fadeIn"><code>https://m.facebook.com/martha.stewart</code></li>
+          <li class="examples wow fadeIn"><code>https://vine.co/johndoe</code></li>
+        <li class="examples wow fadeIn"><code>https://www.instagram.com/justinbieber</code></li>
+    </p>
+
+    <p class="examples wow fadeIn">
+        Your personal profile <b>does not</b> look anything like these examples:
+    </p>
+
+    <p>
+        <li class="examples wow fadeIn"><code>https://www.facebook.com</code></li>
+        <li class="examples wow fadeIn"><code>Sally Struthers</code></li>
+        <li class="examples wow fadeIn"><code>sally@struthers.com</code></li>
+    </p>
+
+    <p class="wow fadeIn">
+        <b>Still struggling?</b> If you are logged into any of your accounts in your current browser,
+        you should be able to click the corresponding icon below
+        and it will redirect you to the respective site where your profile page resides. Once you're there, copy the URL from your
+        browser's address bar and come back here to try again.
+
+        <ul class="soc wow fadeIn">
+            <li><a class="soc-twitter" href="https://www.twitter.com/" target="_blank"></a></li>
+            <li><a class="soc-facebook" href="https://www.facebook.com/profile.php" target="_blank"></a></li>
+            <li><a class="soc-instagram" href="https://www.instagram.com" target="_blank"></a></li>
+            <li><a class="soc-youtube" href="https://www.youtube.com" target="_blank"></a></li>
+            <li><a class="soc-vine soc-icon-last" href="https://www.vine.co" target="_blank"></a></li>
+        </ul>
+    </p>
+    <p class="wow fadeIn">findmysocialid@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<template name="typeaheadTemplate">
+<!-- <input id="entry-field" class="typeahead input-lg form-control" type="text" name="text" placeholder="Paste or Enter your ID" autocomplete="off" spellcheck="off" data-source="search"/> -->
+<input class="form-control input-lg typeahead" name="search" type="text" highlight="true" placeholder="Paste a URL or start typing ..." autocomplete="off" spellcheck="off" data-source="search"/>
+</template>
+
+</body>
+
+<template name="ads">
+  <div class="ads"></div>
+</template>
+
+<template name="resultModal">
+    <div class="modal custom fade">
+      <!-- <div class="modal custom wow zoomInUp"> -->
+
+        <div class="modal-dialog">
+            <div id="bodytest" class="modal-content">
+
+
+                <div class="modal-body">
+
+                    <!-- <h2 class="section-heading"> -->
+                      <div id="imageid" class="modal-image"></div>
+                      {{#if jobsLoaded}}
+                        <h2 id="test3" class="test">{{text}}</h2>
+                        {{else}}
+                        <h2 class="test2"> x</h2>
+                        {{> spinner}}
+                        {{/if}}
+                    <!-- </h2> -->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<template name="aboutModal">
+    <div class="modal custom fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="section-heading">
+
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="typeaheadTemplate">
+<!-- <input id="entry-field" class="typeahead input-lg form-control" type="text" name="text" placeholder="Paste or Enter your ID" autocomplete="off" spellcheck="off" data-source="search"/> -->
+<input class="form-control input-lg typeahead" name="search" type="text" highlight="true" placeholder="Paste a URL or start typing ..." autocomplete="off" spellcheck="off" data-source="search"/>
+</template>
+
+<!-- <template name="task">
+  <h2 class="test">{{text}}</h2>
+</template> -->
