@@ -21,7 +21,7 @@
 
   "appName": "findmysocialid",
 
-  "app": "/Users/maxramsay/Dev/Meteor/FindMyYTID",
+  "app": "/Users/maxramsay/Dev/Web/Meteor/FindMyYTID",
 
   "env": {
     "PORT": 58090,

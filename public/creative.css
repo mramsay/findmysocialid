@@ -162,6 +162,11 @@ a:focus {
 
 @font-face {
   font-family: faricyb;
+  src: url("/BPreplayBoldItalics.otf");
+}
+
+@font-face {
+  font-family: faricyb2;
   src: url("/FaricyNew-Bd.otf");
 }
 
@@ -286,7 +291,7 @@ p {
     background-color: #c4302b;
     padding-top: 40%;
     padding:9px 15px;
-    font-family: vwserial;
+    font-family: faricyb2;
     /*add what you want here*/
 }
 
@@ -296,7 +301,7 @@ p {
     background-color: #333399;
     padding-top: 20%;
     padding:9px 15px;
-    font-family: vwserial;
+    font-family: faricyb2;
     /*add what you want here*/
 }
 
@@ -306,7 +311,7 @@ p {
     background-color: #00a478;
     padding-top: 40%;
     padding:9px 15px;
-    font-family: vwserial;
+    font-family: faricyb2;
     /*add what you want here*/
 }
 
@@ -316,7 +321,7 @@ p {
     background-color: #9b6954;
     padding-top: 40%;
     padding:9px 15px;
-    font-family: vwserial;
+    font-family: faricyb2;
     /*add what you want here*/
 }
 
@@ -326,7 +331,7 @@ p {
     background-color: #99CCFF;
     padding-top: 40%;
     padding:9px 15px;
-    font-family: vwserial;
+    font-family: faricyb2;
     /*add what you want here*/
 }
 .modal.custom .modal-dialog {
@@ -335,7 +340,7 @@ p {
     color: black;
     padding-top: 40%;
     padding:9px 15px;
-    font-family: vwserial;
+    font-family: faricyb2;
     /*add what you want here*/
 }
 
