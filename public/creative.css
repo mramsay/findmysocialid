@@ -78,12 +78,12 @@ body {
     border-radius: 10px;
     margin-right: 10px;
     color: #ffffff;
-    background-color: #FF2247;
+    background-color: #9BF0E1;
 }
 
 .soc a:hover {
     z-index: 2;
-    background-color:#ff1447 !important;
+    background-color:#9BF0E1 !important;
 }
 
 .soc-icon-last{
@@ -132,12 +132,12 @@ hr {
     border-width: 3px;
 }
 
-hr.light {
+/*hr.light {
     border-color: #fff;
-}
+}*/
 
 a {
-    color: #EF244D;
+    color: #9bf0e1;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -204,33 +204,65 @@ p {
 
 .bg-primary {
   position: relative;
-  border-top: 40px;
+  /*border-style: solid !important;*/
+  border-top: thin double #000000 !important;
   width: 100%;
   min-height: auto;
-  border-color: red;
   text-align: center;
-  color: white;
-
-  /*background:#000 url(;*/
+  /*background:#282828 ;*/
   background:
-    linear-gradient(
-      rgba(129,33, 189, 0.45),
-      rgba(202, 54, 135, 1)
+      linear-gradient(
+        rgba(0,0, 0, 0),
+        rgba(53, 53, 53, 1)
 
-    ),
-    /* bottom, image */
-    url(http://image.fg-a.com/backgrounds/black-planet-surface-1920.jpg);
+      ),
+      /* bottom, image */
+      url(http://image.fg-a.com/backgrounds/black-planet-surface-1920.jpg);
 
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  /*-moz-transform: scaleY(-1);
-  -webkit-transform: scaleY(-1);
-  transform: scaleY(-1);*/
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    /*-moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);*/
+
+  color: black
 
 }
+
+
+
+.bg-primary2 {
+  position: relative;
+  /*border-top: thin double #FFFFFF !important;*/
+  width: 100%;
+  min-height: auto;
+  border-color: #9bf0e1;
+  text-align: center;
+  color: black;
+  background:
+      linear-gradient(
+        rgba(53, 53, 53, 1),
+        rgba(73, 73, 73, 1)
+
+      ),
+      /* bottom, image */
+      url(http://image.fg-a.com/backgrounds/black-planet-surface-1920.jpg);
+
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    /*-moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);*/
+
+
+}
+
 
 
 .modal-image {
@@ -370,7 +402,7 @@ aside {
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
-    color: #EF244D;
+    color: #9bf0e1;
 }
 
 
@@ -389,12 +421,12 @@ aside {
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #EF244D;
+    color: #9bf0e1;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #EF244D!important;
+    color: #9bf0e1!important;
     background-color: transparent;
 }
 
@@ -435,12 +467,12 @@ aside {
 
     .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 14px;
-        color: #EF244D;
+        color: #9bf0e1;
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
-        color: #eb3812;
+        color: #9bf0e1;
     }
 
     .navbar-default.affix .nav > li>a,
@@ -450,7 +482,7 @@ aside {
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #EF244D;
+        color: #9bf0e1;
     }
 }
 
@@ -462,19 +494,8 @@ header {
     min-height: auto;
     text-align: center;
     color: white;
-    /*background:#000 url(http://78waves.com/bg.jpg);*/
-    background:
-      linear-gradient(
-        rgba(202, 54, 135, 1),
-        rgba(129,33, 189, 0.45)
-      ),
-      /* bottom, image */
-      url("/wallhaven-253019.jpg");
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    background:#000000;
+
 }
 
 
@@ -561,7 +582,7 @@ position: relative;
 .section-heading2 {
   margin-top:20px;
   color:#FFFFFF;
-  font-family:vwserial;
+  font-family:faricyb;
   font-size:50px;
   font-weight: 900;
   text-align:center;
@@ -648,7 +669,7 @@ position: relative;
 }
 
 .text-primary {
-    color: #EF244D;
+    color: #9bf0e1;
 }
 
 
@@ -719,10 +740,10 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #7c25f8;
+    border-color: #9bf0e1;
     font-family: faricyb;
-    color: #fff;
-    background-color: #7c25f8;
+    color: #000;
+    background-color: #9bf0e1;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;

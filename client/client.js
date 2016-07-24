@@ -32,7 +32,6 @@ Meteor.startup(function() {
     }
 
   //prerenderio serch SEO authentication and injection
-  prerenderio.set('prerenderServiceUrl', 'http://localhost:3000/');
   prerenderio.set('prerenderToken', 'jkLknHHhARpdi1hinyz4');
 
   //meteor typeahead injection
@@ -110,7 +109,7 @@ Template.body.rendered = function() {
   $('head').append('<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">');
   $('head').append('<meta name="fragment" content="!">');
   $('head').append('<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);mixpanel.init("9718a7a0b85b9d28bc9486b82eba2d8b");</script><!-- end Mixpanel -->');
-
+  $('head').append('<meta name="description" content="Find your alphanumeric or numeric YouTube, Vine, Instagram, Twitter or Facebook ID for admins, social plugins, and more"/>')
 };
 
   //Helper template that returns client data to the html/
@@ -226,20 +225,20 @@ Template.resultModal.jobsLoaded = function () {
      });
     }
 
-    if (textInput.indexOf("instagram.com") !== -1) {
-      Session.set('platformType',"instagram")
-      setTimeout(function(){
-          ;    Modal.show('resultModal');
-          }, 500)
-      Session.set('jobsLoaded', false);
-      if (!textInput.match(/^[a-zA-Z]+:\/{2}/)){           /// \/\// doesn't work replaced with two slashes {2} repetition
-            textInput = 'https://' + textInput;
-        }
-      Meteor.call('getInstagramID',textInput, function(error, results) {
-      Session.set('myMethodResult', results);
-      Session.set('jobsLoaded', true);
-     });
-    }
+    // if (textInput.indexOf("instagram.com") !== -1) {
+    //   Session.set('platformType',"instagram")
+    //   setTimeout(function(){
+    //       ;    Modal.show('resultModal');
+    //       }, 500)
+    //   Session.set('jobsLoaded', false);
+    //   if (!textInput.match(/^[a-zA-Z]+:\/{2}/)){           /// \/\// doesn't work replaced with two slashes {2} repetition
+    //         textInput = 'https://' + textInput;
+    //     }
+    //   Meteor.call('getInstagramID',textInput, function(error, results) {
+    //   Session.set('myMethodResult', results);
+    //   Session.set('jobsLoaded', true);
+    //  });
+    // }
 
 
     if (textInput.indexOf("twitter.com") !== -1) {
@@ -271,10 +270,10 @@ Template.resultModal.jobsLoaded = function () {
       Session.set('jobsLoaded', true);
      });
     }
-
-    if (textInput.indexOf("youtube.com") && textInput.indexOf("?v=")!== -1) {
-      Session.set('myMethodResult', "That looks like a video, support for videos is in the works!");
-    }
+    //
+    // if (textInput.indexOf("youtube.com") && textInput.indexOf("?v=")!== -1) {
+    //   Session.set('myMethodResult', "That looks like a video, support for videos is in the works!");
+    // }
 
     if (textInput.indexOf("tinyurl") !== -1) {
       Session.set('myMethodResult', "Sorry, tiny URLs are not currently supported!");
