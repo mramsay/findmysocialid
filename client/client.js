@@ -26,13 +26,15 @@ Meteor.startup(function() {
           'description': 'Easily retrieve your Facebook, YouTube, Instagram, or Twitter ID.'
         },
         og: {
-          'image': '/favicons/apple-touch-icon-120x120.png?v=2'
+          'image': '/favicons/apple-icon-120x120.png?v=2'
         }
       });
     }
 
+
+
   //prerenderio serch SEO authentication and injection
-  prerenderio.set('prerenderToken', 'jkLknHHhARpdi1hinyz4');
+  // prerenderio.set('prerenderToken', 'jkLknHHhARpdi1hinyz4');
 
   //meteor typeahead injection
   Meteor.typeahead.inject();
@@ -91,15 +93,15 @@ Template.body.rendered = function() {
   $('head').append('<script type="text/javascript" src="/js/10stars.js" ></script>');
   $('head').append('<script type="text/javascript" src="/js/11fadein.js" ></script>');
   $('head').append('<script type="text/javascript" src="/js/12centermodal.js" ></script>');
-  $('head').append('<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png?v=2">');
-  $('head').append('<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png?v=2">');
-  $('head').append('<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png?v=2">');
-  $('head').append('<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png?v=2">');
-  $('head').append('<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png?v=2">');
-  $('head').append('<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png?v=2">');
-  $('head').append('<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png?v=2">');
-  $('head').append('<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png?v=2">');
-  $('head').append('<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png?v=2">');
+  $('head').append('<link rel="apple-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png?v=2">');
+  $('head').append('<link rel="apple-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png?v=2">');
+  $('head').append('<link rel="apple-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png?v=2">');
+  $('head').append('<link rel="apple-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png?v=2">');
+  $('head').append('<link rel="apple-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png?v=2">');
+  $('head').append('<link rel="apple-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png?v=2">');
+  $('head').append('<link rel="apple-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png?v=2">');
+  $('head').append('<link rel="apple-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png?v=2">');
+  $('head').append('<link rel="apple-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png?v=2">');
   $('head').append('<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png?v=2" sizes="32x32">');
   $('head').append('<link rel="icon" type="image/png" href="/favicons/favicon-194x194.png?v=2" sizes="194x194">');
   $('head').append('<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png?v=2" sizes="96x96">');
@@ -116,8 +118,6 @@ Template.body.rendered = function() {
   Template.resultModal.helpers({
     text: function () { return Session.get('myMethodResult')},
     avatarPath: function () { return "modalImages/facebook.png" + this.avatar}
-
-
 
   });
 
@@ -239,7 +239,6 @@ Template.resultModal.jobsLoaded = function () {
     //   Session.set('jobsLoaded', true);
     //  });
     // }
-
 
     if (textInput.indexOf("twitter.com") !== -1) {
       Session.set('platformType',"twitter")

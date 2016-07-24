@@ -1,5 +1,8 @@
 {
-  "public": {
-
-  }
+  "galaxy.meteor.com": {
+     "env": {
+       "ROOT_URL": "http://www.findmysocialid.com",
+       "MONGO_URL" : "mongodb://waveformer:KobaiPlum1234@ds013891.mlab.com:13891/findmysocialid"
+     }
+   }
 }

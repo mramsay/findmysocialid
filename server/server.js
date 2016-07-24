@@ -4,51 +4,20 @@ BigCollection = new Meteor.Collection('bigcollection');
 BigTypeaheadCollection = new Meteor.Collection('typeahead');
 
 
-prerenderio.set('prerenderServiceUrl', 'http://localhost:3000/');
-prerenderio.set('prerenderToken', 'jkLknHHhARpdi1hinyz4');
+// prerenderio.set('prerenderServiceUrl', 'http://localhost:3000/');
+// prerenderio.set('prerenderToken', 'jkLknHHhARpdi1hinyz4');
 
  Meteor.startup(function() {
-
-
-    // // thanks to https://github.com/mizzao/meteor-autocomplete/blob/master/examples/pubsublocal/server/server.js
-    // if (!BigCollection.find().count()) {
-    //   // Create a "large" collection with a series of records that area easy to
-    //   // predict by a human, but not continuous, so that only some searches will
-    //   // match. For example, all 4-letter words that can be typed with the 20
-    //   // letters from 'a' to 't'. Furthermore, stuff them in the database in a
-    //   // non-alphabetical order, to test how sorting works.
-    //   var someLetters = 'tsrqponmlkjihgfedcba'.split('');
-    //   for (var i1 = 0; i1 < someLetters.length; i1++) {
-    //     for (var i2 = 0; i2 < someLetters.length; i2++) {
-    //       for (var i3 = 0; i3 < someLetters.length; i3++) {
-    //         for (var i4 = 0; i4 < someLetters.length; i4++) {
-    //           BigCollection.insert({
-    //             _id: i1.toString() + '-' + i2.toString() + '-' + i3.toString() + '-' + i4.toString(),
-    //             name: someLetters[i1]+someLetters[i2]+someLetters[i3]+someLetters[i4]
-    //           });
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
-
-    // Create an index on the name field of BigCollection
-    // typeahead._ensureIndex({Youtube_Username: 1});
     BigCollection._ensureIndex({name: 1});
     BigTypeaheadCollection._ensureIndex({name: 1});
-
-
     // typeahead._ensureIndex({Name: 1});         // index by Name
   });
-
-
 // apiAccounts.allow({
 //   insert: function(userId, doc) {
 //     // only allow posting if you are logged in
 //     return !! userId;
 //   }
 // });
-
 Meteor.methods({
 
   'getIPLocation': function(){
@@ -108,13 +77,6 @@ Meteor.methods({
       return "Oops, that doesn't appear to be a valid YouTube URL";
     }
   },
-
-  // Future = Npm.require('fibers/future');
-  // var myFuture = new Future();
-  //  myFuture.return(twitterID);
-  //  // out of callback
-  //  return myFuture.wait();
-
 
   // Facebook API Function
   'getFacebookID' : function (textInput) {
@@ -184,41 +146,6 @@ Meteor.methods({
             return e;
             }
   },
-
-
-  // // Instagram API Function
-  // 'getInstagramID' : function (textInput) {
-  //   // CLIENT ID  506b594e50f94f24a32ff524a702d3c5
-  //   // CLIENT SECRET  e38af99a235343368dee1b886ac3929a
-  //   // WEBSITE URL  https://findmysocialid.com
-  //   // REDIRECT URI https://findmysocialid.com
-  //   // SUPPORT EMAIL  max_ramsay@mac.com
-  //   // code=5c68120382654775bcd9b18f51fd8181
-  //   // "access_token": "5748173.506b594.d71d5df1ca6447758a98c125d3e49105"
-  //   var re = /(?:(?:http|https):\/\/)?(?:www.)?(?:instagram.com|instagr.am)\/([A-Za-z0-9-_]+)/igm;
-  //   if (textInput.indexOf("instagram.com") !== -1) {
-  //   var usernames = re.exec(textInput);
-  //   console.log("Instagram Username = " + usernames);
-  //   var username = usernames[1];
-  //   var instagramRequest = "https://api.instagram.com/v1/users/search?q="+username+"&access_token=5748173.506b594.d71d5df1ca6447758a98c125d3e49105";
-  //
-  //   try {
-  //     var result = Meteor.http.get(instagramRequest, {timeout:30000});
-  //     var respJson = JSON.parse(result.content);
-  //     //look into why this is tossing an error
-  //     instagramID = respJson["data"][0]["id"];
-  //     console.log("Instagram Scraped ID = " + instagramID);
-  //     console.log("______________________________");
-  //     return instagramID;
-  //   }
-  //   catch (e) {
-  //     // something bad happened
-  //     return e;
-  //   }
-  // } else {
-  //   return "Oops, that doesn't appear to be a valid Instagram URL";
-  // }
-  // },
 
   'getInstagramID' : function (textInput) {
     Future = Npm.require('fibers/future');
